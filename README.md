@@ -1,29 +1,29 @@
-# 🎯 Intelligent Identity Tracking System
+# Intelligent Identity Tracking System
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://python.org)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green.svg)](https://opencv.org)
 [![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10+-red.svg)](https://mediapipe.dev)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **Advanced CPU-efficient multi-person identification and persistent tracking system utilizing 5-Point Facial Landmarks, ArcFace ONNX embeddings, and Behavioral Pattern Analysis**
+> Advanced CPU-efficient multi-person identification and persistent tracking system utilizing 5-Point Facial Landmarks, ArcFace ONNX embeddings, and Behavioral Pattern Analysis
 
 ---
 
-## 🚀 System Overview
+## System Overview
 
-This project implements a sophisticated computer vision system that goes beyond simple face recognition to provide **intelligent identity tracking** and **behavioral analysis**. Built with performance in mind, it runs entirely on CPU while maintaining real-time capabilities.
+This project implements a sophisticated computer vision system that goes beyond simple face recognition to provide intelligent identity tracking and behavioral analysis. Built with performance in mind, it runs entirely on CPU while maintaining real-time capabilities.
 
-### ✨ Key Features
+### Key Features
 
-- 👤 **User Registration & Enrollment** - Easy face capture and database creation
-- 🔍 **Real-time Multi-face Identification** - Simultaneous recognition of multiple people
-- 🎯 **Intelligent Identity Tracking** - Persistent monitoring of target individuals
-- 😊 **Behavioral Analysis** - Detection of facial expressions and movements
-- 📊 **Activity Timeline Logging** - Comprehensive behavioral pattern recording
+- User Registration & Enrollment - Easy face capture and database creation
+- Real-time Multi-face Identification - Simultaneous recognition of multiple people
+- Intelligent Identity Tracking - Persistent monitoring of target individuals
+- Behavioral Analysis - Detection of facial expressions and movements
+- Activity Timeline Logging - Comprehensive behavioral pattern recording
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 Camera Input → Haar Detection → FaceMesh 5-Point → ArcFace Embeddings → 
@@ -32,27 +32,27 @@ Similarity Matching → Identity Tracking → Behavior Analysis → Timeline Rec
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Component | Technology | Purpose |
 |-----------|------------|---------|
-| **Face Detection** | Haar Cascades | Fast multi-face detection |
-| **Landmark Detection** | MediaPipe FaceMesh | 5-point facial landmarks |
-| **Feature Extraction** | ArcFace ONNX | High-quality face embeddings |
-| **Similarity Matching** | Cosine Distance | Identity verification |
-| **Behavior Analysis** | Geometric Heuristics | Movement and expression detection |
+| Face Detection | Haar Cascades | Fast multi-face detection |
+| Landmark Detection | MediaPipe FaceMesh | 5-point facial landmarks |
+| Feature Extraction | ArcFace ONNX | High-quality face embeddings |
+| Similarity Matching | Cosine Distance | Identity verification |
+| Behavior Analysis | Geometric Heuristics | Movement and expression detection |
 
 ---
 
-## 📋 Requirements
+## Requirements
 
-- **Python 3.12+**
-- **OpenCV 4.x**
-- **NumPy**
-- **ONNX Runtime**
-- **MediaPipe**
+- Python 3.12+
+- OpenCV 4.x
+- NumPy
+- ONNX Runtime
+- MediaPipe
 
-### 🚀 Quick Installation
+### Quick Installation
 
 ```bash
 pip install opencv-python numpy onnxruntime mediapipe
@@ -60,43 +60,43 @@ pip install opencv-python numpy onnxruntime mediapipe
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 FaceLocking/
 │
-├── 📂 data/
-│   ├── 📂 enroll/          # Raw enrollment images
-│   └── 📂 db/              # Face feature database (face_db.npz)
+├── data/
+│   ├── enroll/          # Raw enrollment images
+│   └── db/              # Face feature database (face_db.npz)
 │
-├── 📂 models/
-│   └── 🤖 embedder_arcface.onnx  # ArcFace ONNX model
+├── models/
+│   └── embedder_arcface.onnx  # ArcFace ONNX model
 │
-├── 📂 src/
-│   ├── 📷 camera.py
-│   ├── 🔍 detect.py
-│   ├── 📍 landmarks.py
-│   ├── 🎯 align.py
-│   ├── 🧠 embed.py
-│   ├── 📝 enroll.py
-│   ├── 👥 recognize.py
-│   ├── 📊 evaluate.py
-│   ├── 🔧 haar_5pt.py
+├── src/
+│   ├── camera.py
+│   ├── detect.py
+│   ├── landmarks.py
+│   ├── align.py
+│   ├── embed.py
+│   ├── enroll.py
+│   ├── recognize.py
+│   ├── evaluate.py
+│   ├── haar_5pt.py
 │   │
-│   ├── ⚙️ config.py
-│   ├── 🎯 identity_tracker.py
-│   ├── 🧐 behavior_analysis.py
-│   └── 📜 event_recorder.py
+│   ├── config.py
+│   ├── identity_tracker.py
+│   ├── behavior_analysis.py
+│   └── event_recorder.py
 │
-├── 🚀 identity_tracking_system.py
-└── 📖 README.md
+├── identity_tracking_system.py
+└── README.md
 ```
 
 ---
 
-## 🎮 Usage Guide
+## Usage Guide
 
-### 📸 Part 1 - Face Enrollment
+### Part 1 - Face Enrollment
 
 ```bash
 py -3.12 -m src.enroll
@@ -105,17 +105,17 @@ py -3.12 -m src.enroll
 **Controls:**
 | Key | Action |
 |-----|--------|
-| `SPACE` | Capture current frame |
-| `A` | Auto-capture multiple frames |
-| `S` | Save captured embeddings |
-| `R` | Reset current session |
-| `Q` | Quit |
+| SPACE | Capture current frame |
+| A | Auto-capture multiple frames |
+| S | Save captured embeddings |
+| R | Reset current session |
+| Q | Quit |
 
-> 💡 **Tip:** More sample images = better recognition accuracy!
+> Tip: More sample images = better recognition accuracy!
 
 ---
 
-### 🔍 Part 2 - Face Recognition
+### Part 2 - Face Recognition
 
 ```bash
 py -3.12 -m src.recognize
@@ -124,10 +124,10 @@ py -3.12 -m src.recognize
 **Controls:**
 | Key | Action |
 |-----|--------|
-| `Q` | Quit |
-| `R` | Reload database |
-| `+/-` | Adjust recognition threshold |
-| `D` | Toggle debug overlay |
+| Q | Quit |
+| R | Reload database |
+| +/- | Adjust recognition threshold |
+| D | Toggle debug overlay |
 
 **Matching Algorithm:**
 ```python
@@ -136,50 +136,50 @@ distance = 1 - cosine_similarity(embedding, db_embedding)
 
 ---
 
-### 🎯 Part 3 - Identity Tracking & Behavioral Analysis
+### Part 3 - Identity Tracking & Behavioral Analysis
 
 ```bash
 py -3.12 identity_tracking_system.py
 ```
 
-#### 🔄 How Identity Tracking Works
+#### How Identity Tracking Works
 
 When the target user appears:
 
-1. 🔍 **System identifies the person**
-2. 🎯 **Establishes persistent tracking on that identity**
-3. 👁️ **Monitors the same person across video frames**
-4. 🚫 **Disregards other detected individuals**
-5. 🧠 **Analyzes basic facial behaviors**
-6. 📊 **Records comprehensive activity timeline**
+1. System identifies the person
+2. Establishes persistent tracking on that identity
+3. Monitors the same person across video frames
+4. Disregards other detected individuals
+5. Analyzes basic facial behaviors
+6. Records comprehensive activity timeline
 
-#### 📊 Tracking States
+#### Tracking States
 
 | State | Description |
 |-------|-------------|
-| **Identification Mode** | All faces are analyzed normally |
-| **Tracking Mode** | Only the target user is monitored |
+| Identification Mode | All faces are analyzed normally |
+| Tracking Mode | Only the target user is monitored |
 
-> 🎯 **Smart Tracking:** The system maintains tracking even during brief recognition failures and only releases if the person disappears for multiple consecutive frames.
+> Smart Tracking: The system maintains tracking even during brief recognition failures and only releases if the person disappears for multiple consecutive frames.
 
 ---
 
-## 🧐 Behavioral Detection
+## Behavioral Detection
 
-### 📊 Detected Behaviors
+### Detected Behaviors
 
 | Behavior | Detection Method |
 |----------|-----------------|
-| 👈 **Move Left** | Nose X coordinate decreases over time |
-| 👉 **Move Right** | Nose X coordinate increases over time |
-| 👁️ **Blink** | Eye landmark vertical distance temporarily reduces |
-| 😊 **Smile** | Mouth corner horizontal distance increases |
+| Move Left | Nose X coordinate decreases over time |
+| Move Right | Nose X coordinate increases over time |
+| Blink | Eye landmark vertical distance temporarily reduces |
+| Smile | Mouth corner horizontal distance increases |
 
-> 🔬 **Approach:** Uses straightforward, interpretable heuristics rather than complex neural networks for transparency and reliability.
+> Approach: Uses straightforward, interpretable heuristics rather than complex neural networks for transparency and reliability.
 
 ---
 
-## 📜 Activity Timeline Recording
+## Activity Timeline Recording
 
 When tracking is active, the system automatically generates activity logs:
 
@@ -188,9 +188,9 @@ When tracking is active, the system automatically generates activity logs:
 ```
 
 **Each entry contains:**
-- 🕐 **Timestamp**
-- 🎯 **Behavior type**
-- 📝 **Description** (if applicable)
+- Timestamp
+- Behavior type
+- Description (if applicable)
 
 **Example Output:**
 ```
@@ -201,16 +201,16 @@ When tracking is active, the system automatically generates activity logs:
 
 ---
 
-## 🎯 System Performance
+## System Performance
 
-### ⚡ Optimization Features
+### Optimization Features
 
-- 🖥️ **CPU-only execution** - No GPU required
-- ⏱️ **Real-time processing** - Optimized for live video
-- 🎯 **Selective tracking** - Focus on target identity only
-- 📊 **Efficient algorithms** - Minimal computational overhead
+- CPU-only execution - No GPU required
+- Real-time processing - Optimized for live video
+- Selective tracking - Focus on target identity only
+- Efficient algorithms - Minimal computational overhead
 
-### 🔧 Configuration
+### Configuration
 
 Key parameters in `src/config.py`:
 
@@ -225,7 +225,7 @@ BLINK_DETECTION_THRESHOLD = 2.8      # Eye closure detection
 
 ---
 
-## 🏆 Final Result
+## Final Result
 
 This project demonstrates the evolution from:
 
@@ -233,36 +233,36 @@ This project demonstrates the evolution from:
 Person Identification → Intelligent Behavioral Monitoring System
 ```
 
-The system not only **identifies individuals** but also **continuously analyzes their behavioral patterns** and maintains **comprehensive activity logs** for advanced monitoring applications.
+The system not only identifies individuals but also continuously analyzes their behavioral patterns and maintains comprehensive activity logs for advanced monitoring applications.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-1. 🍴 Fork the repository
-2. 🌿 Create a feature branch
-3. 💻 Make your changes
-4. 🧪 Test thoroughly
-5. 📤 Submit a pull request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
 ---
 
-## 🙏 Acknowledgments
+## License
 
-- **OpenCV** - Computer vision framework
-- **MediaPipe** - Face landmark detection
-- **ArcFace** - Face recognition model
-- **ONNX Runtime** - Model inference engine
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-## 📞 Contact
+## Acknowledgments
+
+- OpenCV - Computer vision framework
+- MediaPipe - Face landmark detection
+- ArcFace - Face recognition model
+- ONNX Runtime - Model inference engine
+
+---
+
+## Contact
 
 For questions or suggestions, please open an issue on this repository.
 
@@ -270,6 +270,6 @@ For questions or suggestions, please open an issue on this repository.
 
 <div align="center">
 
-**🎯 Built with passion for intelligent computer vision systems 🎯**
+**Built with passion for intelligent computer vision systems**
 
 </div>
